@@ -1,15 +1,21 @@
 <html>
     <head>
-<body>
-
-<p id="one"></p>
-<button onclick="random()">Random</button>
-
-<script>
+        <script>
  function random(){
 
-document.getElementById("one").innerHTML = Math.floor(Math.random() * 999999999999999999999) +1;
+document.getElementById("myNumber").innerHTML = Math.floor(Math.random() * 99999)+1;
 }
 </script>
-
-</body>
+        <style>
+            #myNumber{
+                font-size:100px;
+                text-align:center;
+                margin:50px auto;
+                font-family:Arial, sans-serif;
+            }
+        </style>
+    </head>
+    <body onload="random();">
+        <div id="myNumber"></div>
+    </body>
+</html>
