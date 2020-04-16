@@ -7,18 +7,6 @@
 document.getElementById("myNumber").innerHTML = Math.floor(Math.random() * 99999)+1;
 }
 </script>
-<script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function() { 
-        $("img.source-image").hide();
-        var $source = $("https://raw.githubusercontent.com/angga-prs/YourDelucy/master/hello.jpg").attr("src");
-        $('#page-body').css({
-            'backgroundImage': 'url(' + $source +')',
-            'backgroundRepeat': 'no-repeat',
-            'backgroundPosition': 'top center'
-        });
-    }); 
-    </script>
         <style>
             #myNumber{
                 font-size:100px;
@@ -26,10 +14,40 @@ document.getElementById("myNumber").innerHTML = Math.floor(Math.random() * 99999
                 margin:50px auto;
                 font-family:Arial, sans-serif;
             }
+    
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+html {
+  background: url(https://raw.githubusercontent.com/angga-prs/YourDelucy/master/hello.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
         </style>
     </head>
     <body id="page-body" onload="random();">
-         <img class="source-image" src="https://raw.githubusercontent.com/angga-prs/YourDelucy/master/hello.jpg" alt="" />
+        <div id="bg">
+         <img src="https://raw.githubusercontent.com/angga-prs/YourDelucy/master/hello.jpg" id="bg" alt="">
         <div id="myNumber"></div>
+</div>
     </body>
 </html>
