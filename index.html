@@ -1,16 +1,16 @@
 <html>
     <head>
         <script>
-             function random(){
+ function random(){
 
-            document.getElementById("myNumber").innerHTML = Math.floor(Math.random() * 99999)+1;
-            }
-        </script>
-        <script type="text/javascript" src="js/jquery.js"></script>
+document.getElementById("myNumber").innerHTML = Math.floor(Math.random() * 99999)+1;
+}
+</script>
+<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
     $(document).ready(function() { 
         $("img.source-image").hide();
-        var $source = $("https://raw.githubusercontent.com/angga-prs/YourDelucy/master/hello.jpg").attr("src");
+        var $source = $("img.https://raw.githubusercontent.com/angga-prs/YourDelucy/master/hello.jpg").attr("src");
         $('#page-body').css({
             'backgroundImage': 'url(' + $source +')',
             'backgroundRepeat': 'no-repeat',
@@ -26,11 +26,9 @@
                 font-family:Arial, sans-serif;
             }
         </style>
-
     </head>
     <body id="page-body" onload="random();">
-    <img class="source-image" src="images/image.jpg" alt="" />
+         <img class="source-image" src="https://raw.githubusercontent.com/angga-prs/YourDelucy/master/hello.jpg" alt="" />
         <div id="myNumber"></div>
-</body>
-
+    </body>
 </html>
